@@ -1,7 +1,6 @@
 import styles from './section1.module.scss'
 import dynamic from 'next/dynamic'
 const Chart = dynamic(() => import ('./child/chart'), {ssr: false})
-const Chart2 = dynamic(() => import ('./child/chart2'), {ssr: false})
 
 export default function Sections1({country, cases, death}) {
     console.log(cases)
