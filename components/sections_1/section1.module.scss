@@ -1,17 +1,43 @@
 .wrapper {
-    padding-top: 2rem;
+    padding-top: 1rem;
     display: flex;
     flex-wrap: wrap;
+    min-height: 100vh;
+
+    &__wrapleft {
+        width: 65%;
+        @media (max-width: 568px) {
+            width: 100%;
+            padding: 10px;
+
+        }
+    }
+
+    &__title {
+        margin-top: 10px;
+        padding-bottom: 0.4rem;
+        font-size: 17px;
+        font-weight: 400;
+        opacity: 0.6;
+    }
 
     &__left {
         display: flex;
         flex-direction: column;
-        background-color: white;
         box-shadow: 0 1px 3px 0 rgb(0 0 0 / 5%), 0 3px 1px 0 rgb(0 0 0 / 14%), 0 2px 1px -1px rgb(0 0 0 / 12%);
+        background-color: white;
+
+
 
         &--cta {
             display: flex;
             justify-content: space-between;
+            padding-right: 25px;
+            flex-wrap: wrap;
+            @media (max-width: 568px) {
+                padding-right: 0;
+                flex-direction: column;
+            }
 
             ul {
                 list-style: none;
@@ -41,10 +67,37 @@
                 font-size: 10px;
             }
 
+            &--card {
+                // min-width: 112%;
+
+                @media (max-width: 568px) {
+                    display: none;
+                }
+            }
+
         }
     }
 
-    &__right {}
+    &__right {
+        background-color: #3740ff;
+        margin-top: 3.1rem;
+        margin-left: 2rem;
+        max-height: 550px;
+        color: #fff;
+        padding: 10px;
+        width: 28%;
+        @media (max-width: 568px) {
+            width: 100%;
+            margin: 0;
+            margin-top: 2rem;
+        }
+
+        &--title {
+            font-size: 45px;
+            font-weight: 400;
+            margin-top: 15px;
+        }
+    }
 }
 
 .active {
@@ -68,4 +121,10 @@
 
 .red {
     color: rgb(248, 3, 44);
+}
+
+.composition {
+    padding-top: 1rem;
+    font-size: 15px;
+    display: block;
 }

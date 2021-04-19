@@ -1,10 +1,18 @@
 .sidebar {
     ul {
         list-style: none;
-        
 
         li {
-            line-height: 2rem;
+            line-height: 2.5rem;
+               cursor: pointer;
+               opacity: .6;
+            // color: #888787;
+
+            img {
+                max-width: 15px;
+                padding-top: 5px;
+                padding-right: 10px;
+            }
         }
     }
 }

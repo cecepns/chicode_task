@@ -3,9 +3,8 @@
     justify-content: space-between;
     height: 10vh;
     align-items: center;
-    padding: 0 6rem;
+    padding: 0 2rem;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 2px 1px -1px rgb(0 0 0 / 12%);
-    
 
     &__logo {
         img {
@@ -14,6 +13,31 @@
     }
 
     &__menu {
+
+        display: flex;
+
+        &--notification {
+            cursor: pointer;
+            padding-right: 25px;
+            padding-top: 15px;
+            img {
+                max-width: 20px;
+            }
+        }
+
+        &--profile {
+            max-width: 50px;
+            max-height: 50px;
+            border-radius: 100%;
+            overflow: hidden;
+            cursor: pointer;
+
+            img {
+                max-width: 55px;
+                
+            }
+
+        }
 
     }
 }

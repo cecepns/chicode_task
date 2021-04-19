@@ -35,11 +35,10 @@ export default function ComponentsChart({country, cases, death}) {
         }
     })
 
-    console.log(cases)
 
     return (
         <section>
-            <Chart options={options.options} series={data.series} type="line"/>
+            <Chart options={options.options} series={data.series} type="line" />
         </section>
     )
 }

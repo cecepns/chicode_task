@@ -1,10 +1,7 @@
 
-
 .layout {
 
-    &__navbar {
-
-    }
+    &__navbar {}
 
     &__main {
         padding-top: 3px;
@@ -14,11 +11,17 @@
         &--sidebar {
             width: 20%;
             overflow-y: scroll;
+            @media (max-width: 568px) {
+                display: none;
+            }
         }
 
         &--content {
             width: 80%;
             background-color: rgba(243,244,246,1);
+            @media (max-width: 568px) {
+                width: 100%;
+            }
         }
     }
 }
