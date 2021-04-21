@@ -2,6 +2,8 @@ import styles from '../styles/home/home.module.scss'
 import Navbar from '../components/navbar'
 import Sidebar from '../components/sidebar'
 import Section1 from '../components/sections_1'
+import Section2 from '../components/sections_2'
+import Section3 from '../components/sections_3'
 
 export async function getServerSideProps() {
 
@@ -40,6 +42,8 @@ export default function Home({country, cases, death}) {
                 </div>
                 <div className={styles['layout__main--content']}>
                     <Section1 country={country} cases={cases} death={death}/>
+                    <Section2 country={country} cases={cases} death={death}/>
+                    <Section3 country={country} cases={cases} death={death}/>
                 </div>
             </div>
         </div>

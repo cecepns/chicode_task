@@ -1,6 +1,7 @@
 import styles from './section1.module.scss'
 import dynamic from 'next/dynamic'
 const Chart = dynamic(() => import ('./child/chart'), {ssr: false})
+const Chart2 = dynamic(() => import ('./child/chart2'), {ssr: false})
 
 export default function Sections1({country, cases, death}) {
     console.log(cases)
@@ -79,6 +80,17 @@ export default function Sections1({country, cases, death}) {
                     </div>
                     <div className={styles['wrapper__left--cta--card']}>
                         <Chart country={country} cases={cases} death={death}/>
+                        <div className={styles['wrapper__left--cta--report']}>
+                            <select>
+                                <option>
+                                    Last 7 days
+                                </option>
+                                <option>
+                                    Last 14 days
+                                </option>
+                            </select>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,13 +98,53 @@ export default function Sections1({country, cases, death}) {
                 <span className={styles['composition']}>
                     Active Users right now
                 </span>
-                <h1 className={styles['wrapper__right--title']}>{cases.reduce((acc, curr) => {
+                <h1 className={styles['wrapper__right--title']}>
+                    {cases.reduce((acc, curr) => {
                         return acc + curr
-                    }, 0)}</h1>
+                    }, 0)}
+                </h1>
                 <span className={styles['composition']}>
                     Page views per minute
                 </span>
-                {/* <Chart2 country={country} cases={cases} death={death}/> */}
+
+                <Chart2 country={country} cases={cases} death={death}/>
+
+                <div className={styles['wrapper__right--cta']}>
+
+                    <div className={styles['wrapper__right--cta--title']}>
+                        <span>Top Active Pages</span>
+                        <span>Active users</span>
+                    </div>
+                    <div className={styles['wrapper__right--cta--item']}>
+                        <ul>
+                            <li>
+                                <span>/#/</span>
+                                <span>65</span>
+                            </li>
+                            <li>
+                                <span>/#/learner/my_course</span>
+                                <span>45</span>
+                            </li>
+                            <li>
+                                <span>/#/learner/my_course</span>
+                                <span>23</span>
+                            </li>
+                            <li>
+                                <span>/#/learner/my_course</span>
+                                <span>23</span>
+                            </li>
+                            <li>
+                                <span>/#/learner/my_course</span>
+                                <span>21</span>
+                            </li>
+                        </ul>
+
+                        <h1 className={styles['wrapper__right--cta--item--report']}>
+                            REAL TIME REPORT &#8594;
+                        </h1>
+                    </div>
+
+                </div>
 
             </div>
         </section>

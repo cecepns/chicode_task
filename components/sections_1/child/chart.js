@@ -19,9 +19,10 @@ export default function ComponentsChart({country, cases, death}) {
             chart: {
                 height: 350,
                 type: 'line',
-                zoom: {
-                    enabled: false
+                toolbar: {
+                    show: false
                 }
+
             },
             markers: {
                 size: 5
@@ -30,15 +31,25 @@ export default function ComponentsChart({country, cases, death}) {
                 width: [2, 2]
             },
             xaxis: {
-                categories: country
+                categories: country,
+                labels: {
+                    // show: false
+                },
+                position: 'bottom'
+            },
+            yaxis: {
+                
+                labels: {
+                    show: true,
+                }
+
             }
         }
     })
 
-
     return (
         <section>
-            <Chart options={options.options} series={data.series} type="line" />
+            <Chart options={options.options} series={data.series} type="line"/>
         </section>
     )
 }
