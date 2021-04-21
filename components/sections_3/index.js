@@ -1,4 +1,4 @@
-import styles from './section3.module.scss'
+import styles from './Section3.module.scss'
 import dynamic from 'next/dynamic'
 const Chart3 = dynamic(() => import ('./child/chart3'), {ssr: false})
 
