@@ -24,6 +24,29 @@ export default function ComponentsChart({country, cases, death}) {
                 }
 
             },
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 320
+                        },
+                        xaxis: {
+                            labels: {
+                                // show: false,
+                                // show: true,
+                                offsetX: 5,
+                                offsetY: 0,
+                            }
+                        },
+                        yaxis: {
+                            labels: {
+                                show: false
+                            }
+                        }
+                    }
+                }
+            ],
             markers: {
                 size: 5
             },

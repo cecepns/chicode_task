@@ -66,10 +66,9 @@
             }
 
             &--card {
-                // min-width: 112%;
-                @media (max-width: 568px) {
-                    display: none;
-                }
+                // @media (max-width: 568px) {
+                //     display: none;
+                // }
             }
 
             &--report {
